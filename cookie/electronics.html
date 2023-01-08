@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <!DOCTYPE html>
+<html>
+    <head>
+        <title>Electronics</title>
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../node_modules/jquery.cookie/jquery.cookie.js"></script>
+        <script>
+            $(function(){
+                if($.cookie("username")==undefined){
+                    location.href = "login.html";
+                } else {
+                    $("#User").html($.cookie("username"));
+                }
+
+                $("#btnSignout").click(function(){
+                    $.removeCookie("username");
+                    location.href="login.html";
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <h2>Electronics Home <span id="User"></span> <button id="btnSignout">Signout</button></h2>
+        <p>Electronics Page..</p>
+        <a href="home.html">Home</a>
+    </body>
+</html>

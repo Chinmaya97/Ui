@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function VarifyUser() {
+            var user = document.getElementById("UserName").value;
+            
+            var msg = document.getElementById("usererror");
+            if (user == "") {
+                msg.innerHTML = "can't empty".fontcolor('red').italics();
+            } else {
+                msg.innerHTML = ""
+            }
+               
+            
+        }
+        function ChangeCase() {
+            var user = document.getElementById("UserName").value;
+            document.getElementById("UserName").value = user.toUpperCase();
+
+
+        }
+
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>User Name:</dt>
+        <dd><input id="UserName" onkeyup="ChangeCase()" onblur="VarifyUser()" type="text"></dd>
+        <dd id="usererror"></dd>
+    </dl>
+    
+</body>
+</html>

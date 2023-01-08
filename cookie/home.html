@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/jquery.cookie/jquery.cookie.js"></script>
+    <script>
+        $(document).ready(function(){
+            if($.cookie('username')== undefined) {
+                location.href = "login.html"
+            } else{
+                $("#User").html($.cookie("username"));
+            }
+            $("#btnSignout").click(function(){
+                $.removeCookie("username");
+                location.href = "login.html";
+            })
+        })
+    </script>
+</head>
+<body>
+    <h2>Home-<span id="User"></span><button id="BtnSignout">signout</button></h2>
+    <p>This is authentcated users only</p>
+    <a href="electronics.html">Electronics</a>
+    
+</body>
+</html>

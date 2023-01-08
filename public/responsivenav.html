@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive navbar</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        nav div {
+            border: 1px solid black;
+            padding: 4px;
+            font-size: 22px;
+            width: 150px;
+        }
+        @media screen and (orientation: landscape) {
+            nav {
+                display: flex;
+            }
+            nav div {
+                margin-right: 20px;
+            }
+        }
+        @media screen and (orentation: portrait) {
+            nav {
+                display: block;
+            }
+            nav div {
+                margin-bottom: 20px;
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <div><span class="bi bi-house"></span>Home</div>
+        <div><span class="bi bi-person-fill"></span>Login</div>
+        <div><span class="bi bi-bell-fill"></span>Notification</div>
+        <div><span class="bi bi-globe"></span>Network</div>
+    </nav>
+</body>
+</html>
+

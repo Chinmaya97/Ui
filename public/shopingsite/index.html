@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        header {
+            display: flex;
+            justify-content: space-between;
+            background-color: black;
+            color: white;
+            padding: 5px;
+            font-size: 22px;
+            font-family: Arial;
+        }
+        header span {
+            margin-right: 20px;
+        }
+        section {
+            margin-top: 10px;
+            height: 500px;
+        }
+        iframe {
+            width: 100%;
+            border: none;
+            height: 500px;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            Shopper.
+        </div>
+        <div>
+            <span><a href="home.html" target="mainFrame">Home</a></span>
+            <span><a href="fashion.html" target="mainFrame">Fashion</a></span>
+            <span><a href="electronics.html" target="mainFrame">Electronics</a></span>
+            <span><a href="footwear.html" target="mainFrame">Footwear</a></span>
+           
+        </div>
+        <div>
+           <span class="bi bi-person-fill"></span>
+           <span class="bi bi-heart-fill"></span>
+           <span class="bi bi-cart-fill"></span>
+        </div>
+    </header>
+    <section>
+        <main>
+            <iframe src="home.html" name="mainFrame"></iframe>
+        </main>
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+<script>
+          $(function(){
+              $("#tbl").attr("height",100);
+              $("#tbl").prop("border",1);
+              $("button").click(function(){
+                  $("#tbl").css({"background-color":$("#lstColors").val(),"border":"2px dotted red"});
+              })
+              $("#lstColors").change(function(){
+                $("#tbl").css({"background-color":$("#lstColors").val(),"border":"2px dotted red"});
+              })
+          })
+</script>
+</head>
+<body>
+
+<fieldset>
+<legend>Select Colors</legend>
+<dl>
+<dt>Background Color</dt>
+<dd>
+<select id="lstColors">
+<option value="red">Red</option>
+<option value="green">Green</option>
+<option value="yellow">Yellow</option>
+</select>
+</dd>
+</dl>
+<div>
+<button>Apply Effects</button>
+</div>
+</fieldset>
+<br><br>
+<table id="tbl">
+<tr>
+<td>Name</td>
+<td>Price</td>
+</tr>
+</table>
+</body>
+</html>

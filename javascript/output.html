@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function DeleteClick() {
+            flag = confirm("Are You sure?")
+            if (flag==true) {
+                document.write("<h1>Success</h1><a href='output.html'>Back</a>")
+            }else {
+                alert("cancalled..")
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+    <button onclick="DeleteClick()">Delete</button>
+    
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        section {
+            height: 400px;
+            display: grid;
+            grid-template-columns: 3fr 6fr 3fr;
+        }
+        header {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-size:25px;
+            padding: 10px;
+        }
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-size: 18px;
+            padding: 10px;
+        }
+        .brand {
+            font-size: 22px;
+            font-weight: bold;
+        }
+        summary {
+            font-size: 22px;
+        }
+        menu div {
+            font-size: 18px;
+            margin-top: 10px;
+            border: 1px solid red;
+            width: 100px;
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+        }
+        nav {
+            height: 400px;
+            overflow: auto;
+        }
+        menu div:hover {
+            background-color: yellow;
+            color: black;
+            cursor: pointer;
+        }
+        
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <span class="bi bi-cart"></span>Shopping
+    </header>
+    <section>
+        <nav>
+        <div class="brand">Shopping</div>
+        <details open>
+            <summary>Home</summary>
+            <menu>
+                <div>Login</div>
+                <div>Offers</div>
+                
+            </menu>
+        </details>
+        <details>
+           <summary>Electronics</summary>
+                <menu>
+                    <div>Televisions</div>
+                    <div>Watches</div>
+                    <div>Mobiles</div>
+                </menu>
+        </details>
+        <details>
+            <summary>Footwear</summary>
+            <menu>
+                <div>Casual shoes</div>
+                <div>Formal shoes</div>
+                <div>Slippers</div>
+            </menu>
+        </details>
+        </nav>
+        <main>
+            This is main content..
+
+        </main>
+        <aside>
+            some ads..
+
+        </aside>
+
+    </section>
+    <footer>
+        &copy; Copyright 2022
+    </footer>
+    
+</body>
+</html>

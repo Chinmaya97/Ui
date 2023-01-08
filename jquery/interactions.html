@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Interactions</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+            $(function(){
+                $("#pic").resizable();
+                $("#topics").sortable();
+            })
+</script>
+<style>
+            ol li {
+                width:200px
+            }
+</style>
+</head>
+<body>
+<h2>Resizable</h2>
+<img src="../public/images/footewea.jpg" id="pic" height="100" width="100">
+<h2>Sortable</h2>
+<ol id="topics">
+<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>HTML</li>
+<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>JQuery</li>
+<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Bootstrap</li>
+<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>CSS</li>
+<li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Styles</li>
+</ol>
+</body>
+</html>

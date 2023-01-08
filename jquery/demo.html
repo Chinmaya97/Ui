@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectors</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script>
+        $(function() {
+            $("#btnSubmit").click(function () {
+                $("lblNmae").text($("#txtName").val())
+                $("#lblPrice").text($("#txtPrice").val());
+                $("#lblCity").text($("#lstCities").val());
+                if($("#optStock").prop("checked") == true) {
+                    $("#lblStock").text("Available")
+                } else {
+                    $("#lblStock").text("Out of stock")
+                }
+                
+            })
+        })
+
+    </script>
+
+</head>
+<body class="container-fluid">
+    <h2 class="text-primary text-center">Amazon Shopping</h2>
+    <div class="row">
+        <div class="col-3">
+            <div class="form-group">
+                <div>
+                    <label>Name</label>
+                </div>
+                <div>
+                    <input id="txtName" type="text" class="form-control">
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div>
+                    <label for="">Price</label>
+                </div>
+                <div>
+                    <input id="txtPrice" type="text" class="form-control">
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div>
+                    <label for="">Shipped To</label>
+                </div>
+                <div>
+                    <select id="lstCities" class="form-select">
+                        <option value="Delhi">Delhi</option>
+                        <option value="Hyd">Hyd</option>
+                        <option value="Mumbai">Mumbai</option>
+                        </select>
+                        
+                </div>
+
+
+        </div>
+        <div class="form-check">
+            <label for="">In Stock</label>
+
+        </div>
+        <div>
+            <input id="optStock"  type="checkbox" class="form-check-input">Yes
+
+        </div>
+    </div>
+    <div class="form-group">
+        <button id="btnSubmit" class="btn btn-primary btn-block">Submit</button>
+        </div>
+        </div>
+        
+    <div class="col-9">
+        <table class="table table-hover">
+        <tr>
+        <td>Name</td>
+        <td id="lblName"></td>
+        </tr>
+        <tr>
+        <td>Price</td>
+        <td id="lblPrice"></td>
+        </tr>
+        <tr>
+        <td>City</td>
+        <td id="lblCity"></td>
+        </tr>
+        <tr>
+        <td>Stock Status</td>
+        <td id="lblStock"></td>
+        </tr>
+        </table>
+        </div>
+        </div>
+        
+    
+        
+   
+    
+</body>
+</html>

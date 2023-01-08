@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Consume Data</title>
+        <script src="../node_modules/jquery/dist/jquery.js"> </script>
+        <script>
+            $(function(){
+                 $.ajax({
+                     method: 'GET',
+                     url: "http://127.0.0.1:2040/products",
+                     success:function(data){
+                        $.each(data,function(key,value){
+                             $(`<tr><td>${value.Name}</td><td>${value.Price}</td><td>${value.Rating.rate}</td></tr>`).appendTo("tbody");
+                        })
+                     }
+                 })
+                 $("#btnSearch").click(function(){
+                     var id = parseInt($("#txtId").val());
+                     $.ajax({
+                         method: 'GET',
+                         url : `http://127.0.0.1:2040/products/${id}`,
+                         success: function(data){
+                              $("#details").append(`Name:${data[0].Name}<br>Price:${data[0].Price}<br>Rating:${data[0].Rating.rate}`);
+                         }
+                     })
+                 })
+            })
+        </script>
+    </head>
+    <body>
+        <table width="400" border="1">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <h3>Search Product</h3>
+        Product Id : <input type="text" id="txtId"> <button id="btnSearch">Search</button>
+        <p id="details"></p>
+    </body>
+</html>
